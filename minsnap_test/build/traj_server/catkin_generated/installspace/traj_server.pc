@@ -1,0 +1,8 @@
+prefix=/home/balong18/aerial_robot/minsnap_test/install
+
+Name: traj_server
+Description: Description of traj_server
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,2 @@
+quadrotor_msgs:traj_server:traj_utils:trajectory_generator
+-DCATKIN_DEVEL_PREFIX=/home/balong18/aerial_robot/minsnap_test/devel -DCMAKE_INSTALL_PREFIX=/home/balong18/aerial_robot/minsnap_test/install -G Unix Makefiles
