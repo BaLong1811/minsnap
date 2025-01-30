@@ -1,0 +1,8 @@
+prefix=/home/balong18/aerial_robot/minsnap_test/devel
+
+Name: traj_utils
+Description: Description of traj_utils
+Version: 0.0.0
+Cflags: -I/home/balong18/aerial_robot/minsnap_test/src/traj_utils/include
+Libs: -L${prefix}/lib -ltraj_utils
+Requires: 
