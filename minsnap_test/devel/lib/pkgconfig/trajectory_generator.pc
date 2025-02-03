@@ -1,8 +1,0 @@
-prefix=/home/balong18/aerial_robot/minsnap_test/devel
-
-Name: trajectory_generator
-Description: Description of trajectory_generator
-Version: 0.0.0
-Cflags: -I/home/balong18/aerial_robot/minsnap_test/src/trajectory_generator/include
-Libs: -L${prefix}/lib -ltrajectory_generator
-Requires: roscpp nav_msgs geometry_msgs traj_utils mavros_msgs

@@ -1,0 +1,18 @@
+<launch>
+  <arg name="mean_vel" value="1.0" /> 
+  <!-- should be 0.1 for real experiments -->
+  <arg name="cmd_type" value="0" />
+
+  <!-- Define the argument for the RViz config file -->
+  <arg name="rviz_config_file" default="$(find trajectory_generator)/config/px4ctrl.rviz"/>
+
+  <!-- minimum snap close_form, pub poly coefs -->
+  <node pkg="trajectory_generator" name="trajectory_generator_node" type="trajectory_generator_node" output="screen">
+    <param name="mean_vel" value="$(arg mean_vel)" /> 
+    <param name="command_type" value="$(arg cmd_type)" /> 
+  </node>
+
+  <!-- Start Rviz with the specified configuration -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rviz_config_file)"/>
+
+</launch>
