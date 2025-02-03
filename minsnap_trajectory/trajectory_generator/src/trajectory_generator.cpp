@@ -118,7 +118,11 @@ public:
             takeoff_land_data.takeoff_land_cmd = quadrotor_msgs::TakeoffLand::TAKEOFF;
             takeoff_land_pub_.publish(takeoff_land_data);
 
-            ros::Duration(10.0).sleep();
+            ROS_INFO("Taking off...");
+
+            ros::Duration(30.0).sleep();
+
+            ROS_INFO("SUCCESSFULLY TAKE OFF!");
 
             count++;
             loop_count = 1;
@@ -254,6 +258,13 @@ public:
         if (loop_count == 1)
         {            
             generateTrajectory();
+
+            ros::Duration(10.0).sleep();
+
+            ROS_INFO("Landing...");
+            takeoff_land_data.takeoff_land_cmd = quadrotor_msgs::TakeoffLand::LAND;
+            takeoff_land_pub_.publish(takeoff_land_data);
+
             loop_count = 0;
         }
     }
